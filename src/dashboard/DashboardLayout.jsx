@@ -4,7 +4,7 @@ import { useStoreContext } from "../contextApi/ContextAPI";
 import { useFetchMyShortUrls, useFetchTotalClicks } from "../hooks/useQuery";
 import ShortenPopUp from "./ShortenPopUp";
 import { FaLink } from "react-icons/fa";
-import ShortenUrlList from "./ShortenUrlLIst";
+import ShortenUrlList from "./ShortenUrlList";
 import { useNavigate } from "react-router-dom";
 const DashboardLayout = () => {
   // const refetch=false;

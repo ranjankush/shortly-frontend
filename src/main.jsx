@@ -7,6 +7,7 @@ import { QueryClient,QueryClientProvider } from 'react-query'
 
 const queryClient=new QueryClient();
 
+// @ts-ignore
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
