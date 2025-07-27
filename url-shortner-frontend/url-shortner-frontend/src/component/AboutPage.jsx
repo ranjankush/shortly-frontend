@@ -8,13 +8,9 @@ const AboutPage = () => {
           About Shortly
         </h1>
         <p className="text-gray-700 text-sm  mb-8 xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
-          Linklytics simplifies URL shortening for efficient sharing. Easily
-          generate, manage, and track your shortened links. Linklytics simplifies
-          URL shortening for efficient sharing. Easily generate, manage, and
-          track your shortened links. Linklytics simplifies URL shortening for
-          efficient sharing. Easily generate, manage, and track your shortened
-          links. Linklytics simplifies URL shortening for efficient sharing.
-          Easily generate, manage, and track your shortened links.
+          Shortly is a streamlined URL shortening tool designed to make link sharing simple and efficient. 
+          With Shortly, users can easily generate shortened links that are compact and easy to share across various platforms.
+           It also offers powerful management features, allowing users to organize and monitor their links effortlessly.
         </p>
         <div className="space-y-5 xl:w-[60%] lg:w-[70%] sm:w-[80%] w-full ">
           <div className="flex items-start">

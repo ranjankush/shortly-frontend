@@ -12,7 +12,18 @@ const LandingPage = () => {
   const {token}=useStoreContext();
    console.log("Token from LandingPage :", token); 
   const dashBoardNavigateHandler=()=>{
+  if (token) {
+    navigate("/dashboard");
+  } else {
+    navigate("/login");
+  };
 
+  // const dashBoardLinkHandler=()=>{
+  // if (token) {
+  //   navigate("/dashboard/s/:url");
+  // } else {
+  //   navigate("/login");
+  // }
   };
   return (
   <div className="min-h-[calc(100vh-64px)]  lg:px-14 sm:px-8 px-4">
@@ -27,7 +38,7 @@ const LandingPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
         className='font-bold font-roboto text-slate-800 md:text-5xl text-3xl md:leading-[55px] sm:leading-[45px] leading-10 lg:w-full md:w-[70%] w-full'>
-            Shortly Simplyfies URL shortening for efficient sharing.
+            Shortly Simplyfies URL For Efficient Access And Sharing.
         </motion.h1>
         <p className='text-slate-800 text-sm my-5 '>
             Shortly is a powerful and widely used tool in digital communication, marketing, and social media due to their convenience, tracking capabilities, and ability to present links more effectively. 
@@ -44,7 +55,7 @@ const LandingPage = () => {
               }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              // onClick={dashBoardNavigateHandler}
+              onClick={dashBoardNavigateHandler}
             className='bg-custom-gradient w-40 text-white rounded-md py-2'>
                 Manage Links
             </motion.button>
@@ -56,6 +67,7 @@ const LandingPage = () => {
               }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              onClick={dashBoardNavigateHandler}
             className='border-btnColor border w-40 text-btnColor rounded-md py-2'>
                 Create Short Link 
             </motion.button>
@@ -109,4 +121,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default LandingPage;

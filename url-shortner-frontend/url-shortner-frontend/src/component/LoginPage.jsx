@@ -36,7 +36,7 @@ const LoginPage = () => {
             //store token in local storage
             console.log(response.token); 
             setToken(response.token);
-            localStorage.setItem("JWT_TOKEN",JSON.stringify(response.token));
+            // localStorage.setItem("JWT_TOKEN",JSON.stringify(response.token));
             reset();
             toast.success("Login Successful!")
             navigate("/dashboard");
