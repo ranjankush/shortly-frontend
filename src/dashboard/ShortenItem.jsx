@@ -93,7 +93,7 @@ const ShortenItem = ({ originalUrl, shortUrl, clickCount, createdDate }) => {
                   `${shortUrl}`
                 }
               >
-                {subDomain + "/s/" + `${shortUrl}`}
+                {subDomain + "/" + `${shortUrl}`}
               </Link>
               <FaExternalLinkAlt className="text-linkColor" />
             </div>
