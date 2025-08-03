@@ -22,6 +22,6 @@ const ErrorPage = ({ message }) => {
         </button>
     </div>
   )
-}
+};
 
 export default ErrorPage
