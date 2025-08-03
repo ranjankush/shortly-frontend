@@ -7,7 +7,7 @@ const Footer = () => {
       <div className=" mx-auto px-6 lg:px-14 flex flex-col lg:justify-between items-center gap-4">
         <div className="flex justify-center items-center text-center lg:text-left">
           <h2 className="text-3xl font-bold mb-2 mr-2">Shortly</h2>
-          <p >Simplifying URL shortening for efficient sharing</p>
+          <p >Simplifying URL for efficient sharing</p>
         </div>
 
         <p className="mt-4 lg:mt-0 ">
