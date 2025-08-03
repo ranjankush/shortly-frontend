@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Graph from "./Graph";
 import { useStoreContext } from "../contextApi/ContextAPI";
 import { useFetchMyShortUrls, useFetchTotalClicks } from "../hooks/useQuery";
@@ -6,12 +6,12 @@ import ShortenPopUp from "./ShortenPopUp";
 import { FaLink } from "react-icons/fa";
 import ShortenUrlList from "./ShortenUrlList";
 import { useNavigate } from "react-router-dom";
+import { Hourglass } from "react-loader-spinner";
 const DashboardLayout = () => {
   // const refetch=false;
   const { token } = useStoreContext();
   const [shortenPopUp, setShortenPopUp] = useState(false);
   // const totalClicksQuery = useFetchTotalClicks(token, onError);
-
 
   const today = new Date().toISOString().slice(0, 10);
   const oneMonthAgo = new Date();
@@ -28,12 +28,11 @@ const DashboardLayout = () => {
     refetch,
   } = useFetchMyShortUrls(token, onError);
 
-  const { isLoading: loader, data: totalClicks,refetch: fetchClickData, } = useFetchTotalClicks(
-    token,
-    startDate,
-    endDate,
-    onError,
-  );
+  const {
+    isLoading: loader,
+    data: totalClicks,
+    refetch: fetchClickData,
+  } = useFetchTotalClicks(token, startDate, endDate, onError);
 
   function onError() {
     console.log("ERROR");
@@ -47,7 +46,21 @@ const DashboardLayout = () => {
   return (
     <div className="lg:px-14 sm:px-8 px-4 min-h-[calc(100vh-64px)]">
       {loader ? (
-        <p>Loading.......</p>
+        // <p >Loading.......</p>
+        <div className="flex justify-center items-center w-full h-[450px]">
+          <div className="flex flex-col items-center gap-1 -mt-10">
+            <Hourglass
+              visible={true}
+              height="50"
+              width="50"
+              ariaLabel="hourglass-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              colors={["#306cce", "#72a1ed"]}
+            />
+            <p className="text-slate-700">Loading...</p>
+          </div>
+        </div>
       ) : (
         <div className="lg:w-[90%] w-full mx-auto py-16">
           <div className="mb-6 text-center">

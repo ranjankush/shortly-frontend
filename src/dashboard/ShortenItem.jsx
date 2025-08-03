@@ -52,7 +52,7 @@ const ShortenItem = ({ originalUrl, shortUrl, clickCount, createdDate }) => {
       );
 
       const sorted = data.sort(
-        (a, b) => new Date(a.clickDate) - new Date(b.clickDate)
+        (a, b) => new Date(a.clickDate).getTime() - new Date(b.clickDate).getTime()
       );
 
       setAnalyticsData(data);
