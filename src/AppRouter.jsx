@@ -27,7 +27,7 @@ const AppRouter = () => {
           <Route path="/dashboard" element={<PrivateRoute publicPage={false}><DashboardLayout/></PrivateRoute>} />
           <Route path="*" element={<ErrorPage message=" We can't find the page you're looking for !"/>}/>
           <Route path="/error" element={<ErrorPage/>}/>
-          <Route path="/:url" element={<ShortenUrlPage />} />
+          <Route path="/s/:url" element={<ShortenUrlPage />} />
           {/* <Route path="/shortly/:url" element={<ShortenUrlPage />} /> */}
 
         </Routes>
